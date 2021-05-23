@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ToDo from "./components/ToDo"
 import Hirimuon from "./components/Hirimuon"
+import DugangHirimuon from "./components/DugangHihimuon"
 
 const App = () => {
   const [hirimuon, setHirimuon ] = useState([
@@ -8,14 +9,14 @@ const App = () => {
       id: 1,
       text: 'Manhugas',
       adlaw: 'Lunes May 32 @ 69pm',
-      reminder: true,
+      pahinumdom: true,
     },
 
     {
       id: 2,
       text: 'Manlaba',
       adlaw: 'Lunes May 32 @ 69pm',
-      reminder: true,
+      pahinumdom: true,
     },
   ])
 
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <div className='container'>
       <ToDo />
+      <DugangHirimuon />
       {hirimuon.length > 0 ? 
         <Hirimuon 
           hirimuon={hirimuon} 
