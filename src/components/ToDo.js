@@ -15,7 +15,7 @@ const ToDo = ({title}) => {
 }
 
 ToDo.defaultProps = {
-    title: 'ToDo List',
+    title: 'Mga Hirimuon',
 }
 
 ToDo.propTypes = {
