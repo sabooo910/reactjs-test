@@ -3,7 +3,7 @@ import ToDo from "./components/ToDo"
 import Hirimuon from "./components/Hirimuon"
 
 const App = () => {
-  const [hirimuon] = useState([
+  const [hirimuon, setHirimuon ] = useState([
     {
       id: 1,
       text: 'Manhugas',
@@ -19,10 +19,21 @@ const App = () => {
     },
   ])
 
+  // DELETE HIRIMUON
+  const deleteHirimuon = (id) => {
+    setHirimuon(hirimuon.filter((himo) => himo.id !== id))
+  }
+
   return (
     <div className='container'>
       <ToDo />
-      <Hirimuon hirimuon={hirimuon} />
+      {hirimuon.length > 0 ? 
+        <Hirimuon 
+          hirimuon={hirimuon} 
+          onDelete={deleteHirimuon} 
+        /> : 
+        'karasa wara na hirimuon. BATUGAN!'
+      }
     </div>
   );
 }
