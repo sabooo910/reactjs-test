@@ -1,7 +1,14 @@
-const Hirimuon = ({ hirimuon }) => {
+import Hihimuon from './Hihimuon'
+
+const Hirimuon = ({ hirimuon, onDelete }) => {
     return (
         <>
-            {hirimuon.map((himo) => (<h3 key={himo.id}>{himo.text}</h3>))}
+            {hirimuon.map((himo) => 
+            (<Hihimuon 
+                key={himo.id}
+                himo={himo} 
+                onDelete={onDelete} 
+            />))}
         </>
     )  
 }
